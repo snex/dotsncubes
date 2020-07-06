@@ -1,0 +1,182 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        IDM_FILE_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Options",                    IDM_FILE_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 307, 226
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Set Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,95,205,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,205,50,14
+    CONTROL         "Cubes in X-axis: 5",IDC_BOARD_X,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,7,7,74,12
+    CONTROL         "Cubes in Y-axis: 5",IDC_BOARD_Y,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,7,19,73,10
+    CONTROL         "Cubes in Z-axis: 1",IDC_BOARD_Z,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,7,32,73,10
+    CTEXT           "WARNING: Large board sizes may cause the CPU player to take very long to select its moves.",
+                    IDC_STATIC,7,46,293,24
+    SCROLLBAR       IDC_SCROLLBAR1,92,7,208,8
+    SCROLLBAR       IDC_SCROLLBAR2,92,20,208,8
+    SCROLLBAR       IDC_SCROLLBAR3,92,33,208,8
+    CONTROL         "Human",IDC_PLAYER_ONE_HUMAN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,82,41,9
+    CONTROL         "Easy CPU",IDC_PLAYER_ONE_CPU_EASY,"Button",
+                    BS_AUTORADIOBUTTON,7,105,47,12
+    CONTROL         "Medium CPU",IDC_PLAYER_ONE_CPU_MED,"Button",
+                    BS_AUTORADIOBUTTON,7,127,57,14
+    CONTROL         "Hard CPU",IDC_PLAYER_ONE_CPU_HARD,"Button",
+                    BS_AUTORADIOBUTTON,7,153,55,11
+    CONTROL         "Human",IDC_PLAYER_TWO_HUMAN,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | BS_RIGHT | WS_GROUP,202,82,98,9
+    CONTROL         "Easy CPU",IDC_PLAYER_TWO_CPU_EASY,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_RIGHT,250,105,50,8
+    CONTROL         "Medium CPU",IDC_PLAYER_TWO_CPU_MED,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_RIGHT,240,127,60,9
+    CONTROL         "Hard CPU",IDC_PLAYER_TWO_CPU_HARD,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_RIGHT,251,153,49,8
+    CTEXT           "You!",IDC_STATIC,110,82,87,9
+    CTEXT           "The Easy CPU will take points when it sees them, but otherwise moves randomly.",
+                    IDC_STATIC,64,105,180,18
+    LTEXT           "Player One",IDC_STATIC,7,71,84,9
+    LTEXT           "Player Two",IDC_STATIC,262,71,38,10
+    CTEXT           "The Medium CPU won't give you points unless it has to.",
+                    IDC_STATIC,68,127,172,17
+    CTEXT           "The Hard CPU will always give you a minimum number of points when it has to.",
+                    IDC_STATIC,64,153,180,25
+    PUSHBUTTON      "Internet Play",IDC_TCP,112,179,83,15
+END
+
+IDD_INTERNET DIALOG DISCARDABLE  0, 0, 334, 130
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Internet Play"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Start",IDC_LISTEN,55,62,45,15
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,141,110,50,14
+    LTEXT           "Port",IDC_STATIC,25,41,24,8
+    EDITTEXT        IDC_LOCAL_PORT,75,40,66,12,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "If you are hosting the game, type in the port number you wish to use and hit Start. If you are connecting to a host, type in the IP address of the host and the port to connect to and hit Connect.",
+                    IDC_STATUS,7,89,320,16
+    GROUPBOX        "Server Player One",IDC_STATIC,7,2,152,84
+    GROUPBOX        "Client Player Two",IDC_STATIC,175,2,152,84
+    LTEXT           "Host IP",IDC_STATIC,185,17,39,10
+    LTEXT           "Port",IDC_STATIC,185,42,39,11
+    EDITTEXT        IDC_REMOTE_PORT,250,42,66,13,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Connect",IDC_CONNECT,225,62,45,15
+    EDITTEXT        IDC_IP_ADDRESS,229,16,87,13,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_INTERNET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 327
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

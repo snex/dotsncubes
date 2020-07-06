@@ -1,0 +1,55 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: dotsncubes - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/resources.res" /d "NDEBUG" "C:\dotsncubes\resources.rc"" 
+Creating temporary file "C:\DOCUME~1\Shot\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/dotsncubes.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\dotsncubes\board.c"
+"C:\dotsncubes\camera.c"
+"C:\dotsncubes\cpu-ai.c"
+"C:\dotsncubes\main.c"
+"C:\dotsncubes\netplay.c"
+"C:\dotsncubes\player.c"
+"C:\dotsncubes\tga.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Shot\LOCALS~1\Temp\RSP3.tmp" 
+Creating temporary file "C:\DOCUME~1\Shot\LOCALS~1\Temp\RSP4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/dotsncubes.pdb" /machine:I386 /out:"Release/dotsncubes.exe" 
+.\Release\board.obj
+.\Release\camera.obj
+".\Release\cpu-ai.obj"
+.\Release\main.obj
+.\Release\netplay.obj
+.\Release\player.obj
+.\Release\tga.obj
+.\Release\resources.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Shot\LOCALS~1\Temp\RSP4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+board.c
+camera.c
+cpu-ai.c
+main.c
+C:\dotsncubes\main.c(168) : warning C4101: 'rect' : unreferenced local variable
+C:\dotsncubes\main.c(167) : warning C4101: 'hdc' : unreferenced local variable
+netplay.c
+player.c
+tga.c
+Linking...
+
+
+
+<h3>Results</h3>
+dotsncubes.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>
